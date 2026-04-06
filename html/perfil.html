@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - MUSA</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>MUSA</h1>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav id="nav">
+    <span id="nav-user"></span>
+  </nav>
+</header>
+
+<div class="volver-container">
+  <button id="btn-volver" onclick="history.back()" class="btn">← Volver</button>
+</div>
+
+
+<main class="perfil-page">
+
+
+  <h1 id="nombre-museo" class="detalle-title"></h1>
+
+  <div class="pdf-container">
+    <button id="btn-publicar" class="btn">Publicar obra</button>
+  </div>
+
+  <form id="form-obra" class="auth-container" style="display:none;">
+
+    <h3>Datos básicos</h3>
+
+    <input type="text" id="titulo" placeholder="Título" required>
+    <input type="text" id="autor" placeholder="Autor" required>
+    <input type="text" id="tecnica" placeholder="Técnica" required>
+    <textarea id="descripcion" placeholder="Descripción" required></textarea>
+    <input type="text" id="medidas" placeholder="Medidas" required>
+
+    <select id="estado">
+      <option value="">Estado</option>
+      <option value="Bueno">Bueno</option>
+      <option value="Frágil">Frágil</option>
+      <option value="Muy frágil">Muy frágil</option>
+    </select>
+
+    <select id="riesgo">
+      <option value="">Riesgo</option>
+      <option value="Bajo">Bajo</option>
+      <option value="Medio">Medio</option>
+      <option value="Alto">Alto</option>
+    </select>
+
+    <h3>Daños generales</h3>
+    <div class="features">
+      <label><input type="checkbox" class="danos" value="Grietas"> Grietas</label>
+      <label><input type="checkbox" class="danos" value="Suciedad"> Suciedad</label>
+      <label><input type="checkbox" class="danos" value="Desgaste"> Desgaste</label>
+      <label><input type="checkbox" class="danos" value="Humedad"> Humedad</label>
+      <label><input type="checkbox" class="danos" value="Restaurada"> Restaurada</label>
+    </div>
+
+    <h3>Soporte</h3>
+    <div class="features">
+      <label><input type="checkbox" class="soporte" value="Ataque biológico"> Ataque biológico</label>
+      <label><input type="checkbox" class="soporte" value="Ondulaciones"> Ondulaciones</label>
+      <label><input type="checkbox" class="soporte" value="Decoloración"> Decoloración</label>
+      <label><input type="checkbox" class="soporte" value="Deformación"> Deformación</label>
+    </div>
+
+    <h3>Imagen</h3>
+    <input type="file" id="imagen" accept="image/*">
+
+    <button type="submit" class="btn">Guardar obra</button>
+
+  </form>
+
+
+  <section id="mis-obras"></section>
+
+</main>
+
+
+<script type="module" src="../js/perfil.js"></script>
+<script type="module" src="../js/app.js"></script>
+
+</body>
+</html>

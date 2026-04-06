@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>MUSA App</title>
-    <link rel="stylesheet" href="css/styles.css">
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSA App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
 <body>
 
-<h1>Panel de MUSA</h1>
+<header class="header">
+  <h1>MUSA</h1>
 
-                    <!-- Formu-->
-    <form id="form-obra">
-    <input type="text" id="titulo" placeholder="Título" required>
-    <input type="text" id="autor" placeholder="Autor" required>
-    <input type="text" id="tecnica" placeholder="Técnica">
-    <button type="submit">Añadir obra</button>
-    </form>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
 
-                    <!--API -->
-<button id="btn-api">Cargar obras externas</button>
+  <nav id="nav">
+    <span id="nav-user"></span>
+  </nav>
+</header>
 
-                    <!-- CConrenedor-->
-<div id="lista-obras"></div>
+<main>
 
+  
+  <div class="toolbar">
 
+    <input 
+      type="text" 
+      id="buscador" 
+      placeholder="Buscar obra..."
+    >
+
+    <button id="btn-api">
+      Cargar obras externas
+    </button>
+
+  </div>
+
+  <div id="lista-obras"></div>
+
+</main>
+
+<!-- SCRIPTS -->
+<script type="module" src="js/auth.js"></script>
 <script type="module" src="js/app.js"></script>
 
 </body>
