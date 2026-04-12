@@ -146,8 +146,7 @@ Desarrollar una aplicación web completa aplicando:
 
 ## Autor
 
-Pepe
-
+Jefferson Aguilar
 ---
 
 ## Licencia
