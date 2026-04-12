@@ -1,0 +1,160 @@
+# MEMORIA DEL PROYECTO
+
+## MUSA – Plataforma de gestión de obras de arte
+
+---
+
+## 1. Introducción
+
+El proyecto MUSA consiste en el desarrollo de una aplicación web orientada a la gestión y visualización de obras de arte.
+Su objetivo principal es simular el funcionamiento básico de una plataforma de museo digital, permitiendo a los usuarios interactuar con contenido artístico de forma sencilla.
+
+La aplicación ha sido desarrollada íntegramente en frontend, utilizando tecnologías web estándar.
+
+---
+
+## 2. Objetivos
+
+Los objetivos principales del proyecto han sido:
+
+* Desarrollar una aplicación web funcional desde cero
+* Aplicar una estructura modular en JavaScript
+* Implementar un sistema de autenticación básico
+* Gestionar datos en el navegador mediante LocalStorage
+* Crear una interfaz visual coherente inspirada en museos
+* Permitir la interacción dinámica con el usuario
+
+---
+
+## 3. Tecnologías utilizadas
+
+Para el desarrollo del proyecto se han utilizado las siguientes tecnologías:
+
+* HTML5 → estructura de la aplicación
+* CSS3 → diseño visual y responsive
+* JavaScript (ES Modules) → lógica de la aplicación
+* LocalStorage → almacenamiento de datos en cliente
+
+No se ha utilizado backend, por lo que toda la lógica se ejecuta en el navegador.
+
+---
+
+## 4. Estructura del proyecto
+
+El proyecto está organizado en carpetas para facilitar su mantenimiento:
+
+* `/html` → páginas de la aplicación (login, registro, perfil, etc.)
+* `/css` → archivo de estilos global
+* `/js` → lógica dividida en módulos
+* Archivos principales (`index.html`, `app.html`) → acceso y navegación
+
+Esta estructura permite separar responsabilidades y mejorar la escalabilidad.
+
+---
+
+## 5. Funcionalidades implementadas
+
+### 5.1 Sistema de usuarios
+
+Se ha implementado un sistema básico de autenticación que permite:
+
+* Registro de nuevos usuarios
+* Inicio de sesión
+* Persistencia de sesión activa mediante LocalStorage
+
+---
+
+### 5.2 Gestión de obras
+
+El usuario puede:
+
+* Crear nuevas obras
+* Guardarlas en el sistema
+* Visualizarlas en formato galería
+
+---
+
+### 5.3 Buscador
+
+Se ha incorporado un buscador que permite filtrar obras en tiempo real según el texto introducido.
+
+---
+
+### 5.4 Integración con API
+
+La aplicación permite cargar obras externas mediante una API, ampliando el contenido disponible.
+
+---
+
+### 5.5 Vista detalle
+
+Cada obra cuenta con una página individual donde se muestra información más detallada.
+
+---
+
+### 5.6 Interfaz y diseño
+
+El diseño está inspirado en páginas de museos, con:
+
+* Tipografía serif
+* Colores neutros
+* Distribución limpia y centrada en el contenido
+
+Además, la aplicación es responsive, adaptándose a distintos tamaños de pantalla.
+
+---
+
+## 6. Funcionamiento
+
+El funcionamiento general de la aplicación es el siguiente:
+
+1. El usuario accede a la aplicación
+2. Puede registrarse o iniciar sesión
+3. Una vez dentro, accede al panel principal
+4. Puede crear, visualizar o buscar obras
+5. También puede cargar contenido externo desde la API
+
+---
+
+## 7. Problemas encontrados
+
+Durante el desarrollo se han encontrado algunos problemas:
+
+* Conflictos en CSS debido a estilos globales
+* Organización del código en múltiples archivos
+* Gestión de rutas entre páginas
+* Control de sesiones sin backend
+
+Estos problemas se han solucionado mediante:
+
+* Mejora de la estructura del CSS
+* Separación de funcionalidades en módulos
+* Uso de LocalStorage para persistencia
+
+---
+
+## 8. Mejoras futuras
+
+El proyecto puede ampliarse con:
+
+* Backend con Node.js y base de datos
+* Autenticación segura (JWT)
+* Subida de imágenes al servidor
+* Sistema de favoritos
+* Filtros avanzados
+
+---
+
+## 9. Conclusión
+
+El proyecto MUSA ha permitido aplicar conocimientos de desarrollo web frontend, incluyendo estructura, diseño y lógica en JavaScript.
+
+Se ha conseguido una aplicación funcional, organizada y visualmente coherente, que simula el comportamiento básico de una plataforma real.
+
+---
+
+## 10. Autor
+
+Pepe
+
+
