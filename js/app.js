@@ -3,17 +3,8 @@ import { mostrarObras } from "./ui.js";
 import { obtenerObrasAPI } from "./api.js";
 import { guardarObras, obtenerObras } from "./storage.js";
 
-
-
-
 const museo = new Museo("MUSA");
 museo.obras = obtenerObras();
-
- //MOSTRAR MUSEO OBRASaaaaaaaaaa
-
-mostrarObras(museo.obras);
-
-
 
 
 window.verDetalle = function(id) {
@@ -26,42 +17,43 @@ window.verDetalle = function(id) {
     : "./html/detalles.html";
 };
 
+document.addEventListener("DOMContentLoaded", () => {
 
-let cargando = false;
-
-const btnApi = document.getElementById("btn-api");
-
-if (btnApi) {
-  btnApi.addEventListener("click", async () => {
-    if (cargando) return;
-
-    cargando = true;
-
-    try {
-      const obrasAPI = await obtenerObrasAPI();
-
-      // 🔥 evitar duplicados por ID
-      obrasAPI.forEach(obra => {
-        if (!museo.obras.some(o => String(o.id) === String(obra.id))) {
-          museo.obras.push(obra);
-        }
-      });
-
-      guardarObras(museo.obras);
-      mostrarObras(museo.obras);
-
-    } catch (error) {
-      console.error("Error cargando API:", error);
-    }
-
-    cargando = false;
-  });
-}
+  // 🎨 MOSTRAR SOLO SI EXISTE CONTENEDOR
+  const contenedor = document.getElementById("obras");
+  if (contenedor) {
+    mostrarObras(museo.obras);
+  }
 
 
+  let cargando = false;
+  const btnApi = document.getElementById("btn-api");
 
+  if (btnApi) {
+    btnApi.addEventListener("click", async () => {
+      if (cargando) return;
 
-document.addEventListener("DOMContentLoaded", () => 
+      cargando = true;
+
+      try {
+        const obrasAPI = await obtenerObrasAPI();
+
+        obrasAPI.forEach(obra => {
+          if (!museo.obras.some(o => String(o.id) === String(obra.id))) {
+            museo.obras.push(obra);
+          }
+        });
+
+        guardarObras(museo.obras);
+        mostrarObras(museo.obras);
+
+      } catch (error) {
+        console.error("Error cargando API:", error);
+      }
+
+      cargando = false;
+    });
+  }
 
   const buscador = document.getElementById("buscador");
 
@@ -87,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () =>
     toggle.addEventListener("click", () => {
       nav.classList.toggle("active");
     });
-
+  }
 
 
   const navUser = document.getElementById("nav-user");

@@ -1,7 +1,6 @@
 import { guardarUsuario, obtenerUsuarios, guardarUsuarios } from "./storage.js";
 document.addEventListener("DOMContentLoaded", () => {
 
-
   const form = document.getElementById("registro-form");
 
   if (form) {
@@ -25,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       usuarios.push(usuario);
       guardarUsuarios(usuarios);
+
       guardarUsuario(usuario);
+
       window.location.href = "../app.html";
     });
   }

@@ -1,16 +1,17 @@
 export function mostrarObras(obras) {
-  const contenedor = document.getElementById("lista-obras");
+
+  const contenedor =
+    document.getElementById("lista-obras") ||
+    document.getElementById("mis-obras");
+
   if (!contenedor) return;
 
-
   contenedor.innerHTML = "";
-
 
   if (!Array.isArray(obras) || obras.length === 0) {
     contenedor.innerHTML = "<p>No hay obras</p>";
     return;
   }
-
 
   obras.forEach((obra) => {
     const div = document.createElement("div");

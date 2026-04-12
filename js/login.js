@@ -3,7 +3,6 @@ import { obtenerUsuarios, guardarUsuario } from "./storage.js";
 document.addEventListener("DOMContentLoaded", () => {
 
 
-
   const form = document.getElementById("login-form");
 
   if (form) {
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
 
   const btnVolver = document.getElementById("btn-volver");
 

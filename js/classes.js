@@ -1,6 +1,4 @@
 
-
-
 export class Museo {
   constructor(nombre) {
     this.nombre = nombre;
@@ -13,15 +11,17 @@ export class Museo {
 }
 
 
+
 export class Obra {
   constructor(titulo, autor, tecnica) {
-    this.id = Date.now(); // 🔥 clave para todo
+
+    // 🔥 ID único y consistente
+    this.id = "local_" + Date.now();
 
     this.titulo = titulo;
     this.autor = autor;
     this.tecnica = tecnica;
 
-    // 🔽 valores por defecto (evita undefined)
     this.descripcion = "";
     this.estado = "";
     this.riesgo = "";

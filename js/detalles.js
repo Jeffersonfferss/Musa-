@@ -2,7 +2,6 @@ import { obtenerObras } from "./storage.js";
 
 
 
-
 const contenedor = document.getElementById("detalle");
 
 if (!contenedor) {
@@ -13,8 +12,6 @@ if (!contenedor) {
   const id = localStorage.getItem("obraSeleccionada");
 
   const obra = obras.find(o => String(o.id) === String(id));
-
-
 
   if (!obra) {
     contenedor.innerHTML = "<p>Obra no encontrada</p>";
@@ -56,8 +53,6 @@ if (!contenedor) {
     `;
   }
 }
-
-
 
 const btnVolver = document.getElementById("btn-volver");
 

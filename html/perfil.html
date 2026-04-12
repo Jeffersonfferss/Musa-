@@ -10,6 +10,7 @@
 
 <body>
 
+
 <header class="header">
   <h1>MUSA</h1>
 
@@ -19,6 +20,7 @@
     <span id="nav-user"></span>
   </nav>
 </header>
+
 
 <div class="volver-container">
   <button id="btn-volver" onclick="history.back()" class="btn">← Volver</button>
@@ -34,62 +36,134 @@
     <button id="btn-publicar" class="btn">Publicar obra</button>
   </div>
 
+
   <form id="form-obra" class="auth-container" style="display:none;">
 
+
+  <section>
     <h3>Datos básicos</h3>
 
     <input type="text" id="titulo" placeholder="Título" required>
     <input type="text" id="autor" placeholder="Autor" required>
-    <input type="text" id="tecnica" placeholder="Técnica" required>
+    <input type="text" id="tecnica-input" placeholder="Técnica" required>
     <textarea id="descripcion" placeholder="Descripción" required></textarea>
     <input type="text" id="medidas" placeholder="Medidas" required>
+  </section>
 
-    <select id="estado">
-      <option value="">Estado</option>
-      <option value="Bueno">Bueno</option>
-      <option value="Frágil">Frágil</option>
-      <option value="Muy frágil">Muy frágil</option>
-    </select>
+  <section>
+    <h3>Estado</h3>
+    <div class="features">
+      <label><input type="radio" name="estado" value="Bueno"> Bueno</label>
+      <label><input type="radio" name="estado" value="Frágil"> Frágil</label>
+      <label><input type="radio" name="estado" value="Muy frágil"> Muy frágil</label>
+    </div>
+  </section>
 
-    <select id="riesgo">
-      <option value="">Riesgo</option>
-      <option value="Bajo">Bajo</option>
-      <option value="Medio">Medio</option>
-      <option value="Alto">Alto</option>
-    </select>
+  <section>
+    <h3>Riesgo</h3>
+    <div class="features">
+      <label><input type="radio" name="riesgo" value="Bajo"> Bajo</label>
+      <label><input type="radio" name="riesgo" value="Medio"> Medio</label>
+      <label><input type="radio" name="riesgo" value="Alto"> Alto</label>
+    </div>
+  </section>
 
+  <section>
     <h3>Daños generales</h3>
     <div class="features">
-      <label><input type="checkbox" class="danos" value="Grietas"> Grietas</label>
-      <label><input type="checkbox" class="danos" value="Suciedad"> Suciedad</label>
-      <label><input type="checkbox" class="danos" value="Desgaste"> Desgaste</label>
-      <label><input type="checkbox" class="danos" value="Humedad"> Humedad</label>
-      <label><input type="checkbox" class="danos" value="Restaurada"> Restaurada</label>
+      <label><input type="checkbox" data-category="danos" value="Desgaste"> Desgaste</label>
+      <label><input type="checkbox" data-category="danos" value="Humedad"> Humedad</label>
+      <label><input type="checkbox" data-category="danos" value="Restaurada"> Restaurada</label>
     </div>
+  </section>
 
+  <section>
     <h3>Soporte</h3>
     <div class="features">
-      <label><input type="checkbox" class="soporte" value="Ataque biológico"> Ataque biológico</label>
-      <label><input type="checkbox" class="soporte" value="Ondulaciones"> Ondulaciones</label>
-      <label><input type="checkbox" class="soporte" value="Decoloración"> Decoloración</label>
-      <label><input type="checkbox" class="soporte" value="Deformación"> Deformación</label>
-    </div>
+      <label><input type="checkbox" data-category="soporte" value="Ataque biológico"> Ataque biológico</label>
+      <label><input type="checkbox" data-category="soporte" value="Ondulaciones"> Ondulaciones</label>
+      <label><input type="checkbox" data-category="soporte" value="Pérdida"> Pérdida</label>
+      <label><input type="checkbox" data-category="soporte" value="Decoloración"> Decoloración</label>
+      <label><input type="checkbox" data-category="soporte" value="Pliegue"> Pliegue</label>
+      <label><input type="checkbox" data-category="soporte" value="Deformación"> Deformación</label>
+      <label><input type="checkbox" data-category="soporte" value="Arañazo"> Arañazo</label>
+      <label><input type="checkbox" data-category="soporte" value="Desfibrado"> Desfibrado</label>
+      <label><input type="checkbox" data-category="soporte" value="Parche"> Parche</label>
+      <label><input type="checkbox" data-category="soporte" value="Golpe"> Golpe</label>
+      <label><input type="checkbox" data-category="soporte" value="Mancha"> Mancha</label>
+      <label><input type="checkbox" data-category="soporte" value="Suciedad"> Suciedad</label>
+      <label><input type="checkbox" data-category="soporte" value="Oxidación"> Oxidación</label>
+      <label><input type="checkbox" data-category="soporte" value="Desgarro"> Desgarro</label>
+      <label><input type="checkbox" data-category="soporte" value="Corte"> Corte</label>
+      <label><input type="checkbox" data-category="soporte" value="Grieta"> Grieta</label>
+      <label><input type="checkbox" data-category="soporte" value="Abrasión"> Abrasión</label>
 
+      <label>
+        <input type="checkbox" data-category="soporte" value="Otros"> Otros
+      </label>
+      <input type="text" class="otros soporte-otros" placeholder="Especificar..." />
+    </div>
+  </section>
+
+  <section>
+    <h3>Técnica</h3>
+    <div class="features">
+      <label><input type="checkbox" data-category="tecnica" value="Abrasión"> Abrasión</label>
+      <label><input type="checkbox" data-category="tecnica" value="Decoloración"> Decoloración</label>
+      <label><input type="checkbox" data-category="tecnica" value="Huella digital"> Huella digital</label>
+      <label><input type="checkbox" data-category="tecnica" value="Retoque"> Retoque</label>
+      <label><input type="checkbox" data-category="tecnica" value="Ampolla"> Ampolla</label>
+      <label><input type="checkbox" data-category="tecnica" value="Levantamiento"> Levantamiento</label>
+      <label><input type="checkbox" data-category="tecnica" value="Repinte"> Repinte</label>
+      <label><input type="checkbox" data-category="tecnica" value="Mancha"> Mancha</label>
+      <label><input type="checkbox" data-category="tecnica" value="Suciedad"> Suciedad</label>
+      <label><input type="checkbox" data-category="tecnica" value="Craquelado"> Craquelado</label>
+      <label><input type="checkbox" data-category="tecnica" value="Pérdida"> Pérdida</label>
+      <label><input type="checkbox" data-category="tecnica" value="Grieta"> Grieta</label>
+      <label><input type="checkbox" data-category="tecnica" value="Hongos"> Hongos</label>
+
+      <label>
+        <input type="checkbox" data-category="tecnica" value="Otros"> Otros
+      </label>
+      <input type="text" class="otros tecnica-otros" placeholder="Especificar..." />
+    </div>
+  </section>
+
+  
+  <section>
+    <h3>Marco y montaje</h3>
+    <div class="features">
+      <label><input type="checkbox" data-category="marco" value="Abrasión"> Abrasión</label>
+      <label><input type="checkbox" data-category="marco" value="Grieta"> Grieta</label>
+      <label><input type="checkbox" data-category="marco" value="Ángulo separado"> Ángulo separado</label>
+      <label><input type="checkbox" data-category="marco" value="Pérdida"> Pérdida</label>
+      <label><input type="checkbox" data-category="marco" value="Arañazo"> Arañazo</label>
+      <label><input type="checkbox" data-category="marco" value="Repinte"> Repinte</label>
+      <label><input type="checkbox" data-category="marco" value="Ataque de xilófagos"> Ataque de xilófagos</label>
+      <label><input type="checkbox" data-category="marco" value="Suciedad"> Suciedad</label>
+      <label><input type="checkbox" data-category="marco" value="Craquelado"> Craquelado</label>
+      <label><input type="checkbox" data-category="marco" value="Golpe"> Golpe</label>
+
+      <label>
+        <input type="checkbox" data-category="marco" value="Otros"> Otros
+      </label>
+      <input type="text" class="otros marco-otros" placeholder="Especificar..." />
+    </div>
+  </section>
+
+  <section>
     <h3>Imagen</h3>
     <input type="file" id="imagen" accept="image/*">
+  </section>
 
-    <button type="submit" class="btn">Guardar obra</button>
+  <button type="submit" class="btn">Guardar obra</button>
 
-  </form>
-
-
-  <section id="mis-obras"></section>
-
+</form>
+    <section id="mis-obras"></section>
 </main>
 
 
 <script type="module" src="../js/perfil.js"></script>
-<script type="module" src="../js/app.js"></script>
 
 </body>
 </html>
