@@ -134,6 +134,24 @@ Desarrollar una aplicación web completa aplicando:
 
 ---
 
+## Flujo de la aplicación
+
+![Flujo de la aplicación](./DOC/Flujo.png)
+
+  Explicación del flujo
+* El usuario accede a la página principal (landing).
+* Puede registrarse o iniciar sesión.
+* Si el login es correcto, se guarda la sesión en LocalStorage.
+* Accede al panel principal (app.html).
+* Desde ahí puede:
+* * Crear nuevas obras
+* * Buscar obras existentes
+* * Cargar obras desde una API externa
+* Puede acceder al detalle de cada obra.
+* Finalmente, puede cerrar sesión y volver al inicio.
+
+---
+
 ## Mejoras futuras
 
 * Implementación de backend
