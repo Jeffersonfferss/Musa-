@@ -1,5 +1,5 @@
 
-# MUSA
+![Flujo de la aplicación](./DOC/musa.png)
 
 Plataforma web de gestión de obras de arte
 
