@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const usuarios = obtenerUsuarios();
 
-      console.log("Usuarios:", usuarios); // 🔥 debug
+      console.log("Usuarios:", usuarios);
 
       const usuario = usuarios.find(
         u => u.email === email && u.password === password

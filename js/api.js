@@ -2,14 +2,14 @@ export async function obtenerObrasAPI() {
   try {
     const res = await fetch("https://api.artic.edu/api/v1/artworks?page=1&limit=10");
 
-    // 🔥 comprobar respuesta
+   
     if (!res.ok) {
       throw new Error("Error en la respuesta de la API");
     }
 
     const data = await res.json();
 
-    // 🔥 validar estructura
+    
     if (!data || !data.data) {
       return [];
     }

@@ -15,7 +15,6 @@ export class Museo {
 export class Obra {
   constructor(titulo, autor, tecnica) {
 
-    // 🔥 ID único y consistente
     this.id = "local_" + Date.now();
 
     this.titulo = titulo;
